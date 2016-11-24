@@ -108,7 +108,7 @@ def profile(request):
 
 
 def details(request, **kwargs):
-    context = {}
+    context = base(request)
     answer_tag = request.GET.get('answer_tag')
     question_id = kwargs['question_id']
     question = Question.objects.get(id=question_id)
